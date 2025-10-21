@@ -1,172 +1,39 @@
-# Day 4: Promises and Async/Await
+**Theme:** Promises; async/await; `fetch`; `setTimeout`
+**Style:** Live‑code two async flows: a promise demo and a small `fetch` reader (JSONPlaceholder).
 
-Welcome to Day 4 of Week 3! Today, we will cover advanced asynchronous JavaScript concepts, including promises, async/await, fetching data from APIs, and working with `setTimeout`.
+## Learning Goals
 
-## Objectives
+- Create and consume a Promise; convert `.then/.catch` into `async/await`.
+- Use `fetch` to retrieve JSON; handle network/JSON errors distinctly.
+- Use `setTimeout` for simple delay demos and to visualize the event loop.
 
-- Understand promises and how to use them.
-- Learn how to use async/await for asynchronous operations.
-- Fetch data from APIs using fetch.
-- Use `setTimeout` to handle delays in JavaScript.
+## Live‑Coding Demo Checklist
 
-## Instructor Notes
-
-### Introduction to Promises, Async, and Await
-
-- Explain what promises are and why they are useful.
-- Demonstrate creating and using promises.
-- Introduce async/await as a cleaner way to work with promises.
-
-### Fetching Data from APIs
-
-- Explain the concept of APIs and their importance in web development.
-- Demonstrate how to fetch data from an API using fetch and handle responses.
-
-### Working with setTimeout
-
-- Explain the `setTimeout` function and its usage.
-- Demonstrate how to use `setTimeout` to create delays in code execution.
-
-## Hourly Breakdown
-
-### Hour 1: Promises and Async/Await
-
-- **Objectives**:
-  - Understand promises and how to use them.
-  - Learn how to use async/await for asynchronous operations.
-- **Teaching Ideas**:
-
-  - Explain promises:
-
-    - Creating and using promises:
-
-      ```js
-      const myPromise = new Promise((resolve, reject) => {
-        const success = true;
-        if (success) {
-          resolve('Promise resolved successfully!');
-        } else {
-          reject('Promise rejected.');
-        }
-      });
-
-      myPromise
-        .then((message) => {
-          console.log(message);
-        })
-        .catch((error) => {
-          console.error(error);
-        });
-      ```
-
-  - Introduce async/await:
-
-    - Using async/await for asynchronous operations:
-
-      ```js
-      async function fetchData() {
-        try {
-          const response = await fetch('https://api.example.com/data');
-          const data = await response.json();
-          console.log(data);
-        } catch (error) {
-          console.error('Error fetching data:', error);
-        }
-      }
-
-      fetchData();
-      ```
-
-### Hour 2: Fetching Data from APIs and Working with setTimeout
-
-- **Objectives**:
-  - Fetch data from APIs using fetch.
-  - Use `setTimeout` to handle delays in JavaScript.
-- **Teaching Ideas**:
-
-  - Fetching data from APIs:
-
-    - Example:
-
-      ```js
-      async function fetchUser() {
-        const response = await fetch(
-          'https://jsonplaceholder.typicode.com/users/1',
-        );
-        const user = await response.json();
-        console.log(user);
-      }
-
-      fetchUser();
-      ```
-
-  - Working with `setTimeout`:
-
-    - Example:
-
-      ```js
-      console.log('Start');
-
-      setTimeout(() => {
-        console.log('This message is delayed by 2 seconds.');
-      }, 2000);
-
-      console.log('End');
-      ```
-
-## Code Snippets
-
-```js
-// Promises
-
-const myPromise = new Promise((resolve, reject) => {
-  const success = true;
-  if (success) {
-    resolve('Promise resolved successfully!');
-  } else {
-    reject('Promise rejected.');
+- Promise -> async/await equivalence:
+  ```js
+  const p = new Promise((res) => setTimeout(() => res("done"), 500));
+  p.then((v) => console.log(v));
+  (async () => {
+    console.log(await p);
+  })();
+  ```
+- Fetch with guards:
+  ```js
+  async function loadUser(id) {
+    const r = await fetch(`https://jsonplaceholder.typicode.com/users/${id}`);
+    if (!r.ok) throw new Error("HTTP " + r.status);
+    return r.json();
   }
-});
+  ```
 
-myPromise
-  .then((message) => {
-    console.log(message);
-  })
-  .catch((error) => {
-    console.error(error);
-  });
+## Common Pitfalls
 
-// Async/Await
+- Forgetting `await`, swallowing errors, assuming `fetch` rejects on 404 (it doesn’t).
 
-async function fetchData() {
-  try {
-    const response = await fetch('https://api.example.com/data');
-    const data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.error('Error fetching data:', error);
-  }
-}
+## Optional Extensions
 
-fetchData();
+- Add a loading state and a minimal retry button.
 
-// Fetching Data from APIs
+### Breakout (Student Task)
 
-async function fetchUser() {
-  const response = await fetch('https://jsonplaceholder.typicode.com/users/1');
-  const user = await response.json();
-  console.log(user);
-}
-
-fetchUser();
-
-// setTimeout
-
-console.log('Start');
-
-setTimeout(() => {
-  console.log('This message is delayed by 2 seconds.');
-}, 2000);
-
-console.log('End');
-```
+Learners complete **Day 4 Breakout Task - Async & Fetch Mini‑drills** .

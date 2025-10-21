@@ -1,76 +1,82 @@
-# Assignment: Deployment to GitHub Pages
+**Weight:** Week 1 single graded item
+**Due:** Submit by end of day (link to your public GitHub repo in Moodle)
+**Work mode:** Individual (pair for help is okay; submit your own repo)
+**AI policy:** You may read docs/tutorials, but **do not have AI write your commands or content**.
+
+---
 
 ## Objective
 
-- Deploy a project to GitHub Pages.
-- Build and deploy a cheat sheet for Git and Bash commands.
-- Review Chrome DevTools with breakpoints.
+Prove you are fully set up for the rest of the course and can complete the **ACP** workflow on your own:
 
-## Instructions
+- Git installed and globally configured
+- VS Code configured with **Prettier** and **Live Server**
+- GitHub repo created, changes pushed
+- Branch created, **PR opened and merged**
+- Clear evidence of the workflow in your README
 
-### Part 1: Deploying a Project to GitHub Pages
+---
 
-1. **Deploy to GitHub Pages**:
-   - Create a new repository on GitHub or use an existing one.
-   - Enable GitHub Pages in the repository settings:
-     - Go to the repository settings.
-     - Scroll down to the "GitHub Pages" section.
-     - Select the source branch (`main`).
-     - Save the settings.
-   - **Verification**: Take a screenshot of the GitHub Pages settings showing the source branch selected.
+## What to Submit
 
-### Part 2: Building and Deploying a Cheat Sheet
+A **public GitHub repository** named `week1-setup-<firstname-lastname>` containing:
 
-1. **Create a Cheat Sheet**:
-
-   - Create a new file named `cheat-sheet.html`.
-   - Add basic HTML structure and include sections for Git commands (e.g., `git init`, `git clone`, `git add`, `git commit`, `git push`) and Bash commands (e.g., `cd`, `ls`, `touch`, `mkdir`, `pwd`).
-   - **Verification**: Take a screenshot of the HTML file content.
-
-2. **Commit and Push the Cheat Sheet**:
-
-   - Add the cheat sheet to the staging area and commit the changes:
-
+1. `README.md` with the following sections filled out:
+   - **System Info**
+     - OS (Windows/macOS/ChromeOS + version)
+     - Git version (`git --version`)
+     - VS Code version (Help -> About)
+   - **Git Config** (paste output):
      ```bash
-     git add cheat-sheet.html
-     git commit -m "Add cheat sheet for Git and Bash commands"
+     git config --global user.name
+     git config --global user.email
      ```
+   - **Extensions Installed**: Prettier, Live Server (and any others)
+   - **ACP Log** (table with at least 5 entries)
+     | # | Change | Command(s) used | Commit message |
+     | - | ------ | --------------- | -------------- |
+     | 1 | Init repo | `git init` | `chore: init repository` |
+     | 2 | Add README | `git add .` -> `git commit` | `docs: add README` |
+     | 3 | Create dev branch | `git checkout -b dev` | `chore: create dev branch` |
+     | 4 | Add index.html | `git add index.html` -> `git commit` | `feat: add index.html` |
+     | 5 | Merge PR | (via GitHub UI) | `merge: dev -> main` |
+   - **Screens** (optional): Include small screenshots if helpful.
+2. Source files used (`index.html` is fine).
+3. Evidence of branch work: a merged **Pull Request** into `main`.
 
-   - Push the changes to the remote repository:
+> **Chromebook users:** If using **Codespaces**, note that in **System Info** and include your Codespaces URL (no screenshots required).
 
-     ```bash
-     git push origin main
-     ```
+---
 
-   - **Verification**: Take a screenshot of your terminal showing the `git add`, `git commit`, and `git push` commands.
+## Steps (Suggested)
 
-3. **Deploy the Cheat Sheet**:
-   - Ensure GitHub Pages is enabled in the repository settings.
-   - The cheat sheet will be available at `https://<username>.github.io/<repository>/cheat-sheet.html`.
-   - **Verification**: Take a screenshot of the deployed cheat sheet page in your browser.
+1. Create and initialize a new local folder or Codespace.
+2. Configure Git (if not already done).
+3. Create `README.md` and `index.html` and make a few small commits.
+4. Create repo on GitHub, connect remote, and push.
+5. Create a `dev` branch, make a tiny change, push, open a **PR** to `main`, and **merge** it.
+6. Update your README’s **ACP Log** with the steps you actually ran.
 
-### Part 3: Reviewing Chrome DevTools with Breakpoints
+---
 
-1. **Set and Use Breakpoints**:
-   - Open Chrome DevTools (F12 or right-click > Inspect).
-   - Navigate to the "Sources" tab.
-   - Set breakpoints by clicking on the line number in the source code.
-   - Use the "Resume script execution" (F8) and "Step over" (F10) buttons to debug JavaScript.
-   - **Verification**: Take a screenshot of Chrome DevTools showing a breakpoint set and the execution paused.
+## Rubric (100 pts)
+
+| **Criteria**                  | **Exceeds (20)**                                                                                                             | **Meets (16)**                                      | **Approaches (12)**                           | **Not Evident (0)** |
+| ----------------------------- | ---------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------- | ------------------- |
+| Git Installed & Global Config | Version shown; `user.name` & `user.email` correct; default branch set to `main`; line endings configured appropriately by OS | Version shown; `user.name` & `user.email` set       | Partial/unclear evidence of install or config | No evidence         |
+| VS Code + Extensions          | VS Code installed; Prettier + Live Server working; `.prettierrc` present; Format on Save enabled                             | VS Code installed; Prettier + Live Server installed | Only one extension or settings missing        | No evidence         |
+| Repo & Remote                 | Public GitHub repo connected; clean history; clear commit messages                                                           | Repo connected and pushed                           | Repo exists but not pushed or unclear history | No repo             |
+| Branch, PR, Merge             | `dev` branch created, PR opened & merged; student understands PR flow                                                        | Branch created; PR merged                           | Branch exists; no PR or merge                 | No branch work      |
+| README Quality & ACP Log      | Complete, neat, reproducible steps with ACP table and versions                                                               | Mostly complete                                     | Partial sections; unclear                     | Missing or minimal  |
+
+**Passing threshold:** 70/100
+
+---
 
 ## Submission
 
-- **GitHub Repository**: Create a repository named `github-pages-deployment` and push the following:
-  - The `cheat-sheet.html` file.
-  - Screenshots of all steps executed in the README.md..
-- **Submission Link**: Submit the URL of your GitHub repository. Remember to deploy your lab to GitHub Pages.
+- Submit your **public repo URL** on Moodle. Ensure visibility is **Public**.
 
-## Rubric
+## Academic Honesty
 
-| **Criteria**                  | **Limited (0 pts)**                   | **Partial (3 pts)**                            | **Complete (5 pts)**                                            |
-| ----------------------------- | ------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------- |
-| **GitHub Pages Deployment**   | Project not deployed to GitHub Pages  | Project deployed with minor issues             | Project deployed correctly and screenshot provided              |
-| **Cheat Sheet Creation**      | Cheat sheet not created correctly     | Cheat sheet created with minor issues          | Cheat sheet created correctly and screenshot provided           |
-| **Commit and Push Changes**   | Changes not committed or pushed       | Changes committed and pushed with minor issues | Changes committed and pushed correctly with screenshot provided |
-| **Deploying the Cheat Sheet** | Cheat sheet not deployed              | Cheat sheet deployed with minor issues         | Cheat sheet deployed correctly and screenshot provided          |
-| **Using Chrome DevTools**     | Breakpoints not set or used correctly | Breakpoints set and used with minor issues     | Breakpoints set and used correctly and screenshot provided      |
+This is a **readiness** check. We need _your_ configuration and _your_ commands. If you’re stuck, ask a TA-instead of using an AI to do it for you.

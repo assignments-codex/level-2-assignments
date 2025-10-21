@@ -1,53 +1,16 @@
-# Assignment: Introduction to Styling Frameworks
+**Goal:** Using a **styling framework such as Bootstrap or Tailwind**, set up a page and apply basic utility styling.
 
-## Objective
+## Steps
 
-- Understand the purpose and benefits of using styling frameworks.
-- Get an overview of Bootstrap and Bootswatch.
-- Set up Tailwind CSS in a project.
-- Apply basic styles using Tailwind CSS.
+1. Create `framework-setup.html` and include your chosen framework via CDN.
+2. Add a heading, a button, and a card‑style container.
+3. Apply utilities/components for spacing, colors, and typography (e.g., margins, padding, text sizing).
 
-## Instructions
+**Deliverable:** Public repo `w4-d1-framework-setup` deployed to GitHub Pages.
 
-### Part 1: Overview of Bootstrap and Bootswatch
+## Rubric (20 pts)
 
-1. **Set Up a Bootstrap Project**:
-
-   - Create a `bootstrap.html` file.
-   - Include the Bootstrap CSS file using a CDN or a local file.
-   - Add a container with a heading and a button styled with Bootstrap classes.
-
-2. **Apply a Bootswatch Theme**:
-   - Download a Bootswatch theme from `https://bootswatch.com/`.
-   - Replace the Bootstrap CSS file in `bootstrap.html` with the Bootswatch theme CSS file.
-
-### Part 2: Setting Up Tailwind CSS
-
-1. **Set Up Tailwind CSS Using a CDN**:
-   - Create a `tailwind.html` file.
-   - Include the Tailwind CSS file using a CDN.
-   - Add a container with a heading and a button styled with Tailwind CSS classes.
-
-### Part 3: Basic Styles with Tailwind CSS
-
-1. **Apply Basic Styles Using Tailwind CSS**:
-   - In the `tailwind.html` file, use Tailwind CSS utility classes to style elements for:
-     - Layout: Center an element using Flexbox.
-     - Typography: Style a paragraph with different font sizes and colors.
-     - Colors: Add background and text colors to an element.
-
-## Submission
-
-- **GitHub Repository**: Create a repository named `styling-frameworks` and push the following:
-  - The `bootstrap.html` and `tailwind.html` files with all the changes.
-- **Submission Link**: Submit the URL of your GitHub repository. Remember to deploy your lab to GitHub Pages.
-
-## Rubric
-
-| Criteria                          | Limited (0 pts)                                     | Partial (3 pts)                                  | Complete (5 pts)                              |
-| --------------------------------- | --------------------------------------------------- | ------------------------------------------------ | --------------------------------------------- |
-| **Bootstrap Setup**               | Bootstrap setup not implemented correctly           | Bootstrap setup implemented with minor issues    | Bootstrap setup implemented correctly         |
-| **Bootswatch Theme**              | Bootswatch theme not applied correctly              | Bootswatch theme applied with minor issues       | Bootswatch theme applied correctly            |
-| **Tailwind CSS Setup**            | Tailwind CSS setup not implemented correctly        | Tailwind CSS setup implemented with minor issues | Tailwind CSS setup implemented correctly      |
-| **Tailwind CSS Basic Styles**     | Tailwind CSS styles not applied correctly           | Tailwind CSS styles applied with minor issues    | Tailwind CSS styles applied correctly         |
-| **Code Quality and Organization** | Code is poorly organized or difficult to understand | Code is organized with minor issues              | Code is well-organized and easy to understand |
+- **Framework Setup** (0–5): Framework properly included; page loads styles.
+- **Utilities/Components** (0–5): Meaningful use of spacing, color, and typography utilities/components.
+- **Page Structure** (0–5): Clear, semantic layout (header/main/footer or similar).
+- **Clarity/Organization** (0–5): Clean HTML; readable classes; deployed link present.

@@ -1,167 +1,37 @@
-# Day 1: JavaScript Basics
+**Theme:** Variables, types, operators; objects & properties; dot vs bracket notation
+**Style:** Virtual class; live‑code small, verifiable snippets learners can mirror quickly.
 
-Welcome to Week 3! Today, we will review JavaScript basics, including variables, data types, and operators. We will also cover objects and properties, as well as the differences between dot notation and bracket notation.
+## Learning Goals
 
-## Objectives
+- Declare and mutate variables using `let`/`const` (avoid `var` except for contrast).
+- Read/write primitive types and identify truthy/falsy values in conditionals.
+- Create objects and access/update properties with **dot** and **bracket** notation (dynamic keys).
 
-- Review variables, data types, and operators.
-- Understand objects and their properties.
-- Learn the differences between dot notation and bracket notation for accessing object properties.
+## Live‑Coding Demo Checklist
 
-## Instructor Notes
+- Variables & types quick tour; show reassignment rules.
+- Operators: arithmetic, comparison (`==` vs `===`), logical.
+- Build a `person` object and access/mod properties via dot/bracket; demo a **dynamic key**:
+  ```js
+  const key = "firstName";
+  const person = { firstName: "Ada", role: "Engineer" };
+  console.log(person[key]); // Ada
+  ```
 
-### Review Variables, Data Types, and Operators
+## Common Pitfalls
 
-- Variables: `var`, `let`, `const`
-- Data types: `string`, `number`, `boolean`, `object`, `array`, `null`, `undefined`
-- Operators: Arithmetic, assignment, comparison, logical
+- Using `==` instead of `===`; accidental global vars; mutating const objects vs. reassigning the binding.
+- Misunderstanding bracket notation for spaces/dashes or dynamic keys.
 
-### Objects and Properties
+## Optional Extensions
 
-- Definition of objects in JavaScript
-- Creating objects
-- Accessing and modifying properties
+- Show object shorthand and computed properties:
+  ```js
+  const k = "score";
+  const v = 42;
+  const stats = { [k]: v }; // { score: 42 }
+  ```
 
-### Dot Notation vs. Bracket Notation
+### Breakout (Student Task)
 
-- Dot notation: Easier and more readable
-- Bracket notation: More flexible, useful for dynamic properties
-
-## Hourly Breakdown
-
-### Hour 1: Review Variables, Data Types, and Operators
-
-- **Objectives**:
-  - Understand and review variables, data types, and operators.
-- **Teaching Ideas**:
-
-  - Review variables:
-
-    - `var`, `let`, `const`
-    - Example:
-
-      ```js
-      let name = 'John';
-      const age = 30;
-      var isStudent = true;
-      ```
-
-  - Review data types:
-
-    - `string`, `number`, `boolean`, `object`, `array`, `null`, `undefined`
-    - Example:
-
-      ```js
-      let str = 'Hello, World!';
-      let num = 42;
-      let bool = true;
-      let obj = { key: 'value' };
-      let arr = [1, 2, 3];
-      let nothing = null;
-      let notDefined;
-      ```
-
-  - Review operators:
-
-    - Arithmetic: `+`, `-`, `*`, `/`, `%`
-    - Assignment: `=`, `+=`, `-=`, `*=`, `/=`
-    - Comparison: `==`, `===`, `!=`, `!==`, `>`, `<`, `>=`, `<=`
-    - Logical: `&&`, `||`, `!`
-    - Example:
-
-      ```js
-      let a = 10;
-      let b = 20;
-      let sum = a + b; // Arithmetic
-      a += 10; // Assignment
-      let isEqual = a == b; // Comparison
-      let isTrue = a > 5 && b < 25; // Logical
-      ```
-
-### Hour 2: Objects and Properties, Dot Notation vs. Bracket Notation
-
-- **Objectives**:
-  - Understand objects and their properties.
-  - Learn dot notation and bracket notation.
-- **Teaching Ideas**:
-
-  - Define objects and their properties:
-
-    - Example:
-
-      ```js
-      let person = {
-        name: 'Alice',
-        age: 25,
-        isStudent: false,
-      };
-      ```
-
-  - Access and modify properties:
-
-    - Example:
-
-      ```js
-      // Access properties
-      console.log(person.name); // Dot notation
-      console.log(person['age']); // Bracket notation
-
-      // Modify properties
-      person.name = 'Bob';
-      person['age'] = 30;
-      ```
-
-  - Explain dot notation vs. bracket notation:
-
-    - Dot notation: Easier and more readable
-    - Bracket notation: More flexible, useful for dynamic properties
-    - Example:
-
-      ```js
-      let propertyName = 'name';
-      console.log(person[propertyName]); // Bracket notation with dynamic property
-      ```
-
-## Code Snippets
-
-```js
-// Variables
-let name = 'John';
-const age = 30;
-var isStudent = true;
-
-// Data Types
-let str = 'Hello, World!';
-let num = 42;
-let bool = true;
-let obj = { key: 'value' };
-let arr = [1, 2, 3];
-let nothing = null;
-let notDefined;
-
-// Operators
-let a = 10;
-let b = 20;
-let sum = a + b; // Arithmetic
-a += 10; // Assignment
-let isEqual = a == b; // Comparison
-let isTrue = a > 5 && b < 25; // Logical
-
-// Objects and Properties
-let person = {
-  name: 'Alice',
-  age: 25,
-  isStudent: false,
-};
-
-// Accessing and Modifying Properties
-console.log(person.name); // Dot notation
-console.log(person['age']); // Bracket notation
-
-person.name = 'Bob';
-person['age'] = 30;
-
-// Dot Notation vs. Bracket Notation
-let propertyName = 'name';
-console.log(person[propertyName]); // Bracket notation with dynamic property
-```
+Learners complete **Day 1 Breakout Task - JS Basics & Objects** .

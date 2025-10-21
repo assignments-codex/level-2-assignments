@@ -1,48 +1,21 @@
-# Assignment: DOM Manipulation
-
 ## Objective
 
-- Understand basic DOM manipulation techniques.
-- Learn how to use `getElementById`, `querySelector`, and `preventDefault`.
-- Review parsing and stringifying JSON.
+Build a small tool that takes JSON from a `<textarea>`, prevents the default form submit, parses it, and renders a list into the DOM.
 
-## Instructions
+## Requirements
 
-### Part 1: Basic DOM Manipulation Techniques
+1. **DOM Selection & Update** – Use `getElementById` **and** `querySelector` to select elements and update text/attributes safely.
+2. **Event Handling** – Add a `submit` listener; call `event.preventDefault()`; do not reload the page.
+3. **JSON Integration** – Parse user input with `try/catch`. On success, render a list of items; on failure, show a readable error.
+4. **Render Safely** – Use `textContent` and element creation (not raw `innerHTML` injection).
 
-1. **Select and Manipulate Elements**:
-   - Create a `domManipulation.js` file.
-   - Select an element by its ID and change its text content.
-   - Select an element using a CSS selector and change its style.
+## ACP Expectations
 
-### Part 2: Methods: `getElementById`, `querySelector`, `preventDefault`
+Commit after each requirement with clear messages.
 
-1. **Use `getElementById` and `querySelector`**:
-   - In the same `domManipulation.js` file, select a button by its ID and add a click event listener that shows an alert.
-   - Select a link using a CSS selector and add a click event listener that prevents its default action and logs a message.
+## Rubric (20 pts)
 
-### Part 3: Parsing and Stringifying JSON
-
-1. **Parse JSON Strings**:
-
-   - Create a `jsonManipulation.js` file.
-   - Parse a JSON string into a JavaScript object and log the properties.
-
-2. **Stringify JavaScript Objects**:
-   - In the same `jsonManipulation.js` file, stringify a JavaScript object into a JSON string and log it.
-
-## Submission
-
-- **GitHub Repository**: Create a repository named `dom-manipulation` and push the following:
-  - The `domManipulation.js` and `jsonManipulation.js` files with all the changes.
-- **Submission Link**: Submit the URL of your GitHub repository. Remember to deploy your lab to GitHub Pages.
-
-## Rubric
-
-| Criteria                          | Limited (0 pts)                                     | Partial (3 pts)                                 | Complete (5 pts)                              |
-| --------------------------------- | --------------------------------------------------- | ----------------------------------------------- | --------------------------------------------- |
-| **DOM Manipulation**              | Elements not manipulated correctly                  | Elements manipulated with minor issues          | Elements manipulated correctly                |
-| **Event Handling**                | Event handling not implemented correctly            | Event handling implemented with minor issues    | Event handling implemented correctly          |
-| **JSON Parsing**                  | JSON parsing not implemented correctly              | JSON parsing implemented with minor issues      | JSON parsing implemented correctly            |
-| **JSON Stringifying**             | JSON stringifying not implemented correctly         | JSON stringifying implemented with minor issues | JSON stringifying implemented correctly       |
-| **Code Quality and Organization** | Code is poorly organized or difficult to understand | Code is organized with minor issues             | Code is well-organized and easy to understand |
+- **DOM Selection & Update** (0–5) - Correct use of both APIs; visible updates.
+- **Event Handling** (0–5) - Proper listener and `preventDefault` usage.
+- **JSON Integration** (0–5) - Correct parse/stringify flow with error handling.
+- **Code Quality & ACP** (0–5) - Clear structure, naming, and commit history.

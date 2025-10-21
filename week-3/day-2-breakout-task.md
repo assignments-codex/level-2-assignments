@@ -1,41 +1,11 @@
-# Assignment: Advanced JavaScript Concepts
+**Goal:** Contrast `this` in different contexts and round‑trip JSON safely.
 
-## Objective
+## Steps
 
-- Understand the `this` keyword and its usage in different contexts.
-- Learn how to use JSON and parse JSON strings into JavaScript objects.
-- Learn how to stringify JavaScript objects into JSON strings.
-
-## Instructions
-
-### Part 1: Understanding the `this` Keyword
-
-1. **Global Context**:
-
-   - Create a `thisKeyword.js` file.
-   - Log the `this` keyword in the global context.
-
-2. **Object Method Context**:
-
-   - In the same `thisKeyword.js` file, create an object with a method that logs the `this` keyword.
-
-3. **Constructor Function Context**:
-
-   - In the same `thisKeyword.js` file, create a constructor function and instantiate an object that logs the `this` keyword.
-
-4. **Event Handler Context**:
-   - In the same `thisKeyword.js` file, add an event listener to a button that logs the `this` keyword.
-
-### Part 2: Using JSON
-
-1. **Parsing JSON Strings**:
-
-   - Create a `jsonExample.js` file.
-   - Parse a JSON string into a JavaScript object and log the properties.
-
-2. **Stringifying JavaScript Objects**:
-   - In the same `jsonExample.js` file, stringify a JavaScript object into a JSON string and log it.
-
-### Note
-
-> Tasks are not graded but should be treated as an assignment. These are for practice an understanding
+1. Create `context.js`:
+   - Build an object with a method that logs `this.name`.
+   - Add an **arrow** method and observe the difference.
+2. Create `json.js`:
+   - `const text = '{"title":"Codex","year":2025}'`; parse with `try/catch`.
+   - Stringify the result with `JSON.stringify(obj, null, 2)` and log it.
+3. Commit after each file; push to `w3-d2-this-json`.

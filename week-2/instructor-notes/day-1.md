@@ -1,189 +1,31 @@
-# Day 1: Review HTML Elements and Document Structure
+**Theme:** HTML elements & document structure, `<pre>`, box model, default (user‑agent) styles vs custom CSS
+**Style:** Virtual class, live‑coding preferred. Keep tasks small so learners can practice during the breakout.
 
-Welcome to Week 2 of Level 2! Today, we will review HTML elements and document structure, introduce the PRE tag, revisit the box model, and compare browser built-in styles with custom styles.
+## Learning Goals
 
-## Objectives
+- Build a valid semantic page with header/nav/main/sections/footer.
+- Demonstrate the `<pre>` tag (preserves whitespace/line breaks).
+- Inspect and explain the **box model** (margin, border, padding, content).
+- Contrast **user‑agent styles** with **custom CSS overrides**.
 
-- Understand HTML elements and document structure.
-- Learn about the PRE tag and its usage.
-- Review the box model.
-- Compare browser built-in styles with custom styles.
+## Live‑Coding Demo Checklist
 
-## Instructor Notes
+- Create `index.html` from scratch with semantic regions (header/nav/main/section/footer).
+- Show UA styles with no CSS, then add a small stylesheet and override defaults (font, color, margins).
+- Add a `<pre>` example containing multi‑line text and visible spacing.
+- Create a visible “box” `<div>` and style width/height/padding/border/margin; use DevTools to inspect.
 
-### HTML Elements and Structure
+## Common Pitfalls to Anticipate
 
-- Explain the basic structure of an HTML document.
-- Review common HTML elements and their purposes.
+- Missing semantic tags or incorrect nesting.
+- Confusing margin vs padding when spacing the box.
+- Forgetting to include a CSS file or correct `<link>` path.
 
-### Introduction to the PRE Tag
+## Optional Extensions (time‑permitting)
 
-- Explain the purpose of the PRE tag.
-- Demonstrate how to use the PRE tag to display preformatted text.
+- Normalize/reset CSS ( mention) and why it exists.
+- Add a second “comparison” paragraph that shows default vs. customized styles side‑by‑side.
 
-### Review of the Box Model
+### Breakout (Student Task)
 
-- Revisit the box model, including content, padding, border, and margin.
-- Demonstrate how to use CSS to manipulate the box model.
-
-### Browser Built-in Styles vs. Custom Styles
-
-- Explain the concept of browser built-in styles (user agent styles).
-- Show how to override built-in styles with custom CSS.
-
-## Hourly Breakdown
-
-### Hour 1: HTML Elements and Structure, Introduction to the PRE Tag
-
-- **Objectives**:
-  - Understand the basic structure of an HTML document.
-  - Learn about common HTML elements.
-  - Understand the usage of the PRE tag.
-- **Teaching Ideas**:
-
-  - Explain the basic structure of an HTML document:
-
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <meta charset="UTF-8" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1.0"
-        />
-        <title>Document</title>
-      </head>
-      <body>
-        <!-- Common HTML elements go here -->
-      </body>
-    </html>
-    ```
-
-  - Review common HTML elements such as headings, paragraphs, lists, links, and images:
-
-    ```html
-    <h1>This is a Heading</h1>
-    <p>This is a paragraph.</p>
-    <ul>
-      <li>List item 1</li>
-      <li>List item 2</li>
-    </ul>
-    <a href="https://example.com">This is a link</a>
-    <img
-      src="image.jpg"
-      alt="Example Image"
-    />
-    ```
-
-  - Introduce the PRE tag and its usage:
-
-    ```html
-    <pre>
-    This is preformatted text.
-    It preserves spaces and line breaks.
-    </pre>
-    ```
-
-### Hour 2: Review of the Box Model, Browser Built-in Styles vs. Custom Styles
-
-- **Objectives**:
-  - Understand the box model.
-  - Compare browser built-in styles with custom styles.
-- **Teaching Ideas**:
-
-  - Revisit the box model and explain its components (content, padding, border, margin):
-
-    ```html
-    <div class="box">This is a box.</div>
-    ```
-
-    ```css
-    .box {
-      width: 200px;
-      height: 100px;
-      padding: 20px;
-      border: 5px solid black;
-      margin: 10px;
-    }
-    ```
-
-  - Demonstrate how to use CSS to manipulate the box model.
-  - Explain the concept of browser built-in styles and show examples:
-
-    ```html
-    <p>This is a paragraph with built-in styles.</p>
-    ```
-
-  - Show how to override built-in styles with custom CSS:
-
-    ```css
-    p {
-      font-size: 18px;
-      color: blue;
-    }
-    ```
-
-## Code Snippets
-
-```html
-<!-- Basic HTML Document Structure -->
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
-    <title>Document</title>
-  </head>
-  <body>
-    <!-- Common HTML elements go here -->
-  </body>
-</html>
-
-<!-- Common HTML Elements -->
-<h1>This is a Heading</h1>
-<p>This is a paragraph.</p>
-<ul>
-  <li>List item 1</li>
-  <li>List item 2</li>
-</ul>
-<a href="https://example.com">This is a link</a>
-<img
-  src="image.jpg"
-  alt="Example Image"
-/>
-
-<!-- Using the PRE Tag -->
-<pre>
-This is preformatted text.
-It preserves spaces and line breaks.
-</pre>
-
-<!-- Box Model Example -->
-<div class="box">This is a box.</div>
-
-<!-- CSS for Box Model -->
-<style>
-  .box {
-    width: 200px;
-    height: 100px;
-    padding: 20px;
-    border: 5px solid black;
-    margin: 10px;
-  }
-</style>
-
-<!-- Example of Built-in Styles -->
-<p>This is a paragraph with built-in styles.</p>
-
-<!-- Overriding Built-in Styles with Custom CSS -->
-<style>
-  p {
-    font-size: 18px;
-    color: blue;
-  }
-</style>
-```
+Learners complete **Day 1 Breakout Task**: build a semantic page, add `<pre>`, demonstrate the box model, and compare UA vs. custom styles.

@@ -1,162 +1,99 @@
-# Day 1: Introduction to Git and Terminal
+**Theme:** Install & configure Git + VS Code; Prettier; Live Server; Chromebook paths
 
-Welcome to Week 1 of Level 2! Today, we will introduce Git and the terminal, cover the installation and updating of Git, discuss the differences between Git and GitHub, practice basic terminal commands, and provide an overview of Chrome DevTools.
+---
 
-## Objectives
+## Learning Goals
 
-- Install Git and GitBash.
-- Update Git.
-- Understand the differences between Git and GitHub.
-- Learn basic terminal commands (navigate, list files, create files, pwd, mkdir).
-- Get an overview of Chrome DevTools.
+- Install/update **Git** and set global config (`user.name`, `user.email`, default branch).
+- Install **VS Code**, configure **Prettier** and **Live Server**, set Bash as integrated terminal (Windows).
+- Understand **Git vs GitHub** (tooling vs hosting/collaboration).
+- Chromebook paths: **Linux (Beta)** _or_ **GitHub Codespaces**.
 
-## Instructor Notes
+## Instructor Prep
 
-### Installing Git and GitBash
+- Whiteboard “Git vs GitHub” (2 circles + overlap).
+- Have download links available (Git, VS Code).
 
-- Explain the importance of Git in version control.
-- Guide students to download and install Git from [git-scm.com](https://git-scm.com/).
-- For Windows users, guide them to install GitBash, which provides a terminal emulator.
+---
 
-### Updating Git
+## Timeline
 
-- Explain the need to keep Git updated for the latest features and security patches.
-- Demonstrate how to update Git by downloading the latest version from [git-scm.com](https://git-scm.com/) and running the installer.
+### 0–50 min - Demo 1: Git & VS Code setup
 
-### Overview of Git vs. GitHub
+**Talk-through (5 min):** Why Git; why VS Code; what “ACP” means (Add -> Commit -> Push).
+**Install (20–25 min):**
 
-- Discuss the differences between Git and GitHub.
-  - Git: A version control system to track changes in code.
-  - GitHub: A platform for hosting and collaborating on Git repositories.
-- Use diagrams or charts to illustrate the relationship between Git and GitHub.
+- **Windows**
+  - Install **Git for Windows** (include Git Bash). Choose **“Use Git from the command line and also from 3rd‑party software”** when prompted.
+  - Install **VS Code**. In VS Code -> Extensions: install **Prettier** and **Live Server**.
+  - VS Code -> Terminal -> **Select Default Profile -> Git Bash**.
+- **macOS**
+  - Install Git (Xcode CLI or Homebrew).
+  - Install **VS Code**, add **Prettier** and **Live Server**.
+- **ChromeOS**
+  - _Option A (preferred for low‑power):_ **GitHub Codespaces** -> Create a codespace on new repo; VS Code web opens with terminal.
+  - _Option B (Linux Beta):_ Settings -> **Developers -> Linux development environment -> Turn on** -> `sudo apt update && sudo apt install -y git`. Download VS Code `.deb` and install with Software app.
 
-### Basic Terminal Commands
-
-- Introduce basic terminal commands essential for navigation and file management.
-  - `cd`: Change directory
-  - `ls`: List files
-  - `touch`: Create files
-  - `pwd`: Print working directory
-  - `mkdir`: Make directory
-- Provide practical examples and encourage students to practice each command.
-
-### Overview of Chrome DevTools
-
-- Introduce Chrome DevTools and its purpose for debugging and inspecting web pages.
-- Demonstrate basic features such as Elements, Console, Network, and Sources.
-
-## Hourly Breakdown
-
-### Hour 1: Installing Git and GitBash, Updating Git, Overview of Git vs. GitHub
-
-- **Objectives**:
-  - Understand the importance of Git in version control.
-  - Install and update Git.
-  - Understand the differences between Git and GitHub.
-- **Teaching Ideas**:
-
-  - Explain what version control is and why it's important.
-  - Guide students through the installation of Git:
-
-    ```bash
-    # For Windows
-    Download Git from https://git-scm.com/download/win and run the installer.
-
-    # For Mac
-    Install via Homebrew:
-    brew install git
-
-    # For Linux
-    Use the package manager:
-    sudo apt-get install git
-    ```
-
-  - Demonstrate how to update Git:
-
-    ```bash
-    # Check Git version
-    git --version
-
-    # Update Git (instructions vary by OS)
-    ```
-
-  - Discuss the differences between Git and GitHub using diagrams or charts.
-
-### Hour 2: Basic Terminal Commands, Overview of Chrome DevTools
-
-- **Objectives**:
-  - Learn basic terminal commands for navigation and file management.
-  - Get an overview of Chrome DevTools.
-- **Teaching Ideas**:
-
-  - Introduce the terminal and its role in development.
-  - Demonstrate basic commands:
-
-    ```bash
-    # Change directory
-    cd <directory_name>
-
-    # Go up one directory
-    cd ..
-
-    # List files in the current directory
-    ls
-
-    # Create an empty file
-    touch <file_name>
-
-    # Print the working directory
-    pwd
-
-    # Create a new directory
-    mkdir <directory_name>
-    ```
-
-  - Provide hands-on practice for students to execute these commands.
-  - Explain the purpose of Chrome DevTools and demonstrate basic features:
-    - Elements: Inspect and modify HTML and CSS.
-    - Console: View and interact with JavaScript.
-    - Network: Monitor network requests.
-    - Sources: Debug JavaScript code.
-  - Provide a brief demo on how to use these features.
-
-## Code Snippets
+**Configure Git (all OS):**
 
 ```bash
-# Installing Git
-# For Windows
-Download Git from https://git-scm.com/download/win and run the installer.
-
-# For Mac
-Install via Homebrew:
-brew install git
-
-# For Linux
-Use the package manager:
-sudo apt-get install git
-
-# Updating Git
-# Check Git version
 git --version
-
-# Update Git (instructions vary by OS)
-
-# Basic Terminal Commands
-# Change directory
-cd <directory_name>
-
-# Go up one directory
-cd ..
-
-# List files in the current directory
-ls
-
-# Create an empty file
-touch <file_name>
-
-# Print the working directory
-pwd
-
-# Create a new directory
-mkdir <directory_name>
+git config --global user.name "Your Name"
+git config --global user.email "you@example.com"
+git config --global init.defaultBranch main
 ```
+
+**VS Code settings quick start (UI path):**
+
+- _Settings_ -> search **“default formatter”** -> set to **Prettier**.
+- Enable **Format On Save**.
+- Set **Tab Size: 2**; ensure **End of Line: LF**.
+- Create a **.prettierrc** at repo root:
+
+```json
+{ "singleQuote": true, "semi": true, "trailingComma": "es5", "printWidth": 100 }
+```
+
+**Micro‑demo (5 min):** New folder -> `index.html` -> start **Live Server** -> see hot‑reload.
+
+> **Common pitfalls:** corporate firewalls, missing command‑line tools on macOS, Windows credential prompts, Chromebook permissions.
+
+**10‑minute break**
+
+### 60–110 min - Demo 2: Git vs GitHub • first ACP
+
+- Draw the difference: Git = local VCS; GitHub = remote hosting + collaboration.
+- Create a local folder, ACP a change, create a **new repo on GitHub**, connect and push:
+
+```bash
+mkdir hello-codex && cd hello-codex
+git init
+echo "# Hello Codex" > README.md
+git add .
+git commit -m "chore: init repo with README"
+git remote add origin https://github.com/<username>/hello-codex.git
+git branch -M main
+git push -u origin main
+```
+
+- Verify on GitHub; walk through repo UI and basic settings.
+
+### 110–120 min - Breakout (TA Checks)
+
+- See `day-1-breakout-task.md` for the student checklist.
+- TA/Instructor circulate; verify Git version, config, VS Code extensions, Live Server runs.
+
+---
+
+## Exit Tickets / Evidence
+
+- `git --version` runs.
+- `git config --global user.name/email` set.
+- VS Code installed with **Prettier** + **Live Server**.
+- Public GitHub repo created (hello‑codex).
+
+## Troubleshooting Notes
+
+- **MAC:** If “xcrun: error: invalid active developer path” -> `xcode-select --install`.
+- **Windows:** If `.sh` isn’t recognized in VS Code terminal -> ensure default terminal is **Git Bash**.
+- **ChromeOS:** If Linux isn’t available -> use **Codespaces** for now.

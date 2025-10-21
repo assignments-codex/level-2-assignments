@@ -1,44 +1,24 @@
-# Assignment: CSS Techniques
+**Goal:** Build a simple landing page with a hero and a CTA using RGBA transparency.
 
-## Objective
+## Steps
 
-- Understand common HTML terms like Hero section, footer, header, navigation areas, and call to action.
-- Build a simple splash page to demonstrate each section.
-- Learn about transparency using RGBA in CSS.
+1. Create `index.html` with: header/nav, **hero** (h1 + p), content section (h2 + text), **CTA** (button), footer.
+2. In `styles.css`, add:
 
-## Instructions
+   ```css
+   .hero {
+     padding: 80px 16px;
+     background: rgba(0, 0, 0, 0.5);
+     color: white;
+     text-align: center;
+   }
+   .cta {
+     padding: 24px;
+     background: rgba(255, 0, 0, 0.7);
+     text-align: center;
+   }
+   ```
 
-### Part 1: Common HTML Terms
+3. Ensure semantic markup and readable contrast.
 
-1. **Identify and Define Common HTML Sections**:
-   - In your `README.md` file, define the following terms with a brief explanation for each:
-     - Hero Section
-     - Header
-     - Navigation
-     - Content Section
-     - Call to Action (CTA)
-     - Footer
-   - **Verification**: Include these definitions in your `README.md` file.
-
-### Part 2: Building a Simple Splash Page
-
-1. **Create a Basic HTML Structure**:
-   - Create an `index.html` file.
-   - Add the following sections to your HTML document:
-     - Header with a navigation bar containing links
-     - Hero section with a main heading and a paragraph
-     - Content section with a subheading and some text
-     - Call to Action (CTA) section with a button
-     - Footer with some text
-
-### Part 3: Transparency with RGBA
-
-1. **Apply RGBA for Transparency**:
-   - In your CSS file, apply RGBA color values to the Hero section and the CTA section to add transparency.
-   - Use the following properties:
-     - Hero section: Black background with 50% opacity
-     - CTA section: Red background with 70% opacity
-
-### Note
-
-> Tasks are not graded but should be treated as an assignment. These are for practice an understanding
+**Deliverable (practice):** Push to `w2-d4-splash-rgba`.
