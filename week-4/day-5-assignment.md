@@ -1,16 +1,21 @@
-**Goal:** Build a small, responsive one‑page site using **a styling framework such as Bootstrap or Tailwind**.
+#### Objective
+Interview on building a small, responsive one-page site with a styling framework.
 
-## Steps
+#### Requirements
+1. Live session with a TA or instructor.
+2. Show your deployed site (GitHub Pages) and the public repo `w4-d5-framework-project`.
+3. Be ready to make one small live change, such as:
+   - add a responsive section using grid or flex
+   - adjust spacing or type scale with framework utilities
+   - add or fix a focus style for an interactive element
+4. Demonstrate responsive behavior at small, medium, and large breakpoints.
+5. Answer brief questions about the utilities and components you used.
 
-1. Create `index.html` with: **header/nav**, **hero**, **two content sections**, **CTA**, **footer**.
-2. Use framework utilities/components for layout (Flexbox and/or Grid), spacing, and type.
-3. Ensure responsive behavior at small/medium/large breakpoints.
+#### Submission
+Public repo URL and live URL on GitHub Pages.
 
-**Deliverable:** Public repo `w4-d5-framework-project` deployed to GitHub Pages.
-
-## Rubric (20 pts)
-
-- **Structure & Responsiveness** (0–5): Clear sections; layout adapts across breakpoints.
-- **Framework Usage** (0–5): Effective utilities/components for layout and spacing.
-- **Polish & Accessibility** (0–5): Readable contrast; focusable nav; consistent spacing.
-- **Clarity/Organization** (0–5): Clean code; deployed link present.
+#### Rubric (20 pts)
+- Live task completed 0–5
+- Structure and responsiveness 0–5
+- Framework usage 0–5
+- Clarity and organization 0–5
