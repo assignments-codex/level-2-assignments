@@ -1,49 +1,24 @@
-Call one approved public API and render a single field on the page. Keep it simple so the full demo fits in 5–10 minutes.
+#### Objective
+Interview on building a working Postman request to a free AI provider that can be reused in JavaScript.
 
-Time
-5–10 minutes
+#### Requirements
+1. Live session with a TA or instructor.
+2. Choose a provider (for example, Google Gemini or Cloudflare Workers AI) and open the request in Postman.
+3. Show the endpoint, required headers, model identifier, and request body shape. Use environment variables for secrets.
+4. Send the request live and verify a 200 OK with a valid text field in the JSON response.
+5. Explain how a JS fetch would reuse the same endpoint, headers, and body using placeholders, not real secrets.
 
-Submission
-Meet with a TA or Instructor to demonstrate the items below. After the interview, submit your repo link and live site URL in the LMS.
+#### Live tasks (perform one or two as requested)
+- Add or fix a required header and resend.
+- Change the model or prompt in the body and verify the response.
+- Identify the JSON path for the returned text.
+- Produce a minimal JS fetch snippet that matches your Postman request with placeholders like ${API_TOKEN}.
 
-Approved API choices (pick one)
+#### Submission
+Public repo URL if you created a `w6-d5-ai-postman` README with notes and a fetch snippet. Repo is optional for the interview.
 
-- SWAPI: `https://swapi.dev/api/people/1/` -> render the character name
-- PokéAPI: `https://pokeapi.co/api/v2/pokemon/pikachu` -> render the pokemon name
-- OpenLibrary: `https://openlibrary.org/search.json?q=harry+potter` -> render the first book title
-
-Interview flow
-
-1. Setup
-
-   - Open a small repo with `index.html` and `app.js` (deployed on GitHub Pages).
-   - Show the exact endpoint you will call.
-
-2. Fetch and render
-
-   - Write a minimal `fetchJson(url)` that uses `async/await`, checks `response.ok`, and handles JSON parse errors.
-   - Call the chosen endpoint and render one field with `textContent`:
-     - SWAPI: `data.name`
-     - PokéAPI: `data.name`
-     - OpenLibrary: `data.docs[0].title` (guard if `docs` is empty)
-
-3. Error state
-
-   - Trigger one error (bad ID or query) and show a friendly message instead of crashing.
-
-4. Live coding (chosen by TA/Instructor)
-   - Change the ID/name/query and re-fetch.
-   - Add one small UI touch (e.g., “Loading…” text before the request, then clear it).
-   - Commit with a clear message.
-
-Rubric (20 pts)
-
-- **API call** (0–5): Correct endpoint; `fetch` with `async/await`; guards `response.ok` and JSON parse.
-- **Render** (0–5): One field displayed with `textContent`; layout remains simple and readable.
-- **Error handling** (0–5): Friendly message on failure; app does not crash on a bad query/ID.
-- **Clarity & ACP** (0–5): Small, well-named functions; deployed link works; brief README; incremental commits.
-
-Deliverables (after the interview)
-
-- Public repo link
-- Live site URL
+#### Rubric (20 pts)
+- Request correctness 0–5
+- Variables and hygiene 0–5
+- JS reuse explanation 0–5
+- Communication and time management 0–5
