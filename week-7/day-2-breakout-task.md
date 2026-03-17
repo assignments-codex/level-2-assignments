@@ -1,10 +1,12 @@
-**Goal:** Implement a base class and two child classes that specialize behavior, using `extends` and `super`.
+#### Goal
 
-## Steps
+Use localStorage to save simple app data.
 
-1. Create `ApiService` with a `request(url)` method (stub or real fetch) and a `buildUrl()` placeholder.
-2. Implement two child services (choose any public APIs). Each child defines `buildUrl()` and a `normalize(json)` that returns a common shape (e.g., `{ title, extra }`).
-3. Override one method in a child and call `super` within it.
-4. Console‑demo both children with two calls total and log normalized outputs.
+#### Steps
 
-**Deliverable:** Public repo `w7-d2-inheritance`.
+1. Complete what we built in lecture.
+2. Save one piece of app data to localStorage such as the last search, selected filter, or theme choice.
+3. Load that saved data back into the page on refresh.
+4. Update the saved value when the user changes it.
+5. Extra practice if you want
+   - add a clear saved data button
