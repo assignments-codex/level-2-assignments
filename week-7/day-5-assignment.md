@@ -1,31 +1,26 @@
-**Goal:** Finish and refine your chatbot with clear UX, persistence, and a correct AI request. Keep the design class‑driven.
+#### Objective
 
-## Steps
+Deploy `proxy-key` to Render and use it to call a key based API without exposing the key in your front end source code.
 
-1. OOP design
+#### Requirements
 
-   - Ensure `ChatSession` persists messages reliably (save/load/clear).
-   - Ensure `ChatService` returns a short text reply from your chosen provider.
+1. Fork `https://github.com/tm-LBenson/proxy-key` and deploy it to Render as a Web Service.
+2. Add one environment variable in Render such as `key`, `key2`, `key3`, `key4`, or `key5`.
+3. From your front end app, make a `POST` request to your deployed `proxy-key` endpoint and use the returned key to call one API that requires a key.
+4. Render the API result in the page and show loading and error states.
+5. README includes your live URL and explains that the key is not committed to GitHub or hard coded in your client code.
 
-2. UX and safety
+#### Notes
 
-   - Show loading and error states.
-   - Render with `textContent`. Provide a “clear chat” action.
+This is for learning only. It is not a secure production API. Do not use paid API keys here. Roll or delete your key when you are done.
 
-3. AI request and keys
+#### Submission
 
-   - Follow the provider’s docs for endpoint, headers, and body.
-   - Use a secure key approach approved by your instructor. Do not hard‑code secrets.
+Git repo link [live URL if applicable]
 
-4. Review and polish
-   - Keep functions small and well named.
-   - Add a short `README.md` with how to run and which provider you used.
+#### Rubric (20 pts)
 
-**Deliverable:** Public repo `w7-d5-chatbot-final` with your code and `README.md`.
-
-## Rubric (20 pts)
-
-- **OOP Design** (0–5): Clear class responsibilities; `ChatSession` and `ChatService` work together.
-- **AI Request & Secure Handling** (0–5): Correct endpoint/headers/body; no secrets committed; approach documented.
-- **UX & Persistence** (0–5): Loading/error states; safe rendering; messages persist; clear chat action.
-- **Clarity & ACP** (0–5): Small functions; tidy repo; helpful README; incremental commits.
+- Meets the objective 0-5
+- Render deployment works 0-5
+- Key is not exposed in front end source 0-5
+- Project runs from README 0-5
