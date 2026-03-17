@@ -1,10 +1,13 @@
-**Goal:** Refactor a constructor+prototype pattern into ES6 class syntax and practice small class design.
+#### Goal
 
-## Steps
+Review DOM input and use it to build a dynamic API request.
 
-1. Create `index.html` and `app.js`. Add a constructor+prototype example (your own or a simple sample).
-2. Refactor the example into a `class` with a `constructor` and at least two instance methods.
-3. Add a small cooperating class (e.g., `HistoryStore` with `add`, `list`, `clear`) and show them working together.
-4. Log a short console demo to prove behavior (`new`, method calls). Keep methods small and focused.
+#### Steps
 
-**Deliverable:** Public repo `w7-d1-classes`.
+1. Complete what we built in lecture.
+2. Create a form with at least two inputs and a submit button.
+3. Read the user input from the DOM and use it to build an API request with different params.
+4. Render the result in the page with `textContent`.
+5. Extra practice if you want
+   - add a loading message
+   - show a simple error message
