@@ -46,7 +46,6 @@ You will be asked to perform **one** of the following tasks, chosen by your inst
 - Write a small **pure function** given inputs/outputs.
 - Perform **array processing** with `map`/`filter`/`reduce`.
 - Implement a **string utility** (e.g., normalize, tokenize, or format).
-- Create a **simple object or class** with one or two methods and show usage.
 - Sketch an **async fetch skeleton** with error guards (no secrets, no real keys).
 - Render a small **DOM update** safely with `textContent` based on data.
 
