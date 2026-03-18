@@ -18,7 +18,6 @@ Make sure your project includes **all** of the following before you present:
 - **Responsive layout** using utilities or components (e.g., a styling framework).
 - At least **one API request** with basic **error handling** (friendly message on failure).
 - At least **one data transformation** (e.g., map/filter/reduce) or a small **summary**.
-- At least **one class/module pattern** used meaningfully (e.g., service or session class).
 - **Safe DOM updates** (`textContent` or equivalent).
 - **README** with setup notes, links, and a short architecture description.
 
