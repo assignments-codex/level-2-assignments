@@ -7,8 +7,8 @@
 3. Compute and display at least **two** summaries (examples):
    - Count by category/type.
    - Average of a numeric field.
-   - Top‑N list by a metric.
-4. Render the summaries in small “cards” (divs) using safe text (no raw HTML).
+   - Top-N list by a metric.
+4. Render the summaries in small "cards" (divs) using safe text (no raw HTML).
 
 **Deliverable:** Public repo `w6-d4-transform-summary`.
 

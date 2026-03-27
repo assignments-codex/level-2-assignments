@@ -14,7 +14,7 @@
 
 ## Rubric (20 pts)
 
-- **Breakpoint Usage** (0–5): Correct use of framework breakpoints for layout/spacing/type.
-- **Responsive Behavior** (0–5): Clear changes between mobile/medium/large.
-- **Semantic Structure** (0–5): Logical sections and headings.
-- **Clarity/Organization** (0–5): Clean code; deployed link present.
+- **Breakpoint Usage** (0-5): Correct use of framework breakpoints for layout/spacing/type.
+- **Responsive Behavior** (0-5): Clear changes between mobile/medium/large.
+- **Semantic Structure** (0-5): Logical sections and headings.
+- **Clarity/Organization** (0-5): Clean code; deployed link present.

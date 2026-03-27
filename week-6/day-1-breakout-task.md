@@ -8,9 +8,7 @@
    - Checks `response.ok`; if false, throws an error with status + snippet.
    - Wraps `await response.json()` in `try/catch` to guard invalid JSON.
    - Shows a loading message and a readable error message in the UI.
-3. Call a public endpoint of your choice (e.g., posts, users, or similar). Render 3–5 fields with `textContent`.
+3. Call a public endpoint of your choice (e.g., posts, users, or similar). Render 3-5 fields with `textContent`.
 4. Trigger one controlled error (bad param or URL) and verify the message is helpful.
 
 **Deliverable:** Public repo `w6-d1-error-handling`.
-
----

@@ -1,3 +1,5 @@
+**Mode:** Individual - In-class **Submission:** Public GitHub repo URL (paste to LMS) **Repo name suggestion:** `w2-d3-flex-forms`
+
 ## Objective
 
 Demonstrate Flexbox fundamentals, inline vs block understanding, and an accessible form laid out with Flexbox.
@@ -17,8 +19,8 @@ Commit after each requirement. Keep messages clear (present tense).
 
 ## Rubric (20 pts total)
 
-- **Flexbox Container** (0–5) – Correct container/items and alignment usage.
-- **Inline vs Block** (0–3) – Clear, styled comparison.
-- **Advanced Form Elements** (0–5) – Correct inputs + validation + labels.
-- **Form Layout Using Flexbox** (0–5) – Clean, responsive layout.
-- **Accessibility Touches** (0–2) – Appropriate ARIA/labels; no anti‑patterns.
+- **Flexbox Container** (0-5) - Correct container/items and alignment usage.
+- **Inline vs Block** (0-3) - Clear, styled comparison.
+- **Advanced Form Elements** (0-5) - Correct inputs + validation + labels.
+- **Form Layout Using Flexbox** (0-5) - Clean, responsive layout.
+- **Accessibility Touches** (0-2) - Appropriate ARIA/labels; no anti-patterns.

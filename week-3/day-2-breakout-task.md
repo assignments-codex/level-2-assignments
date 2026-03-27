@@ -1,4 +1,4 @@
-**Goal:** Contrast `this` in different contexts and round‑trip JSON safely.
+**Goal:** Contrast `this` in different contexts and round-trip JSON safely.
 
 ## Steps
 
